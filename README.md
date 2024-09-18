@@ -1,5 +1,10 @@
 # 🎉 Chuck Norris Jokes App 🤣
+
 Welcome to the Chuck Norris Jokes App! This fun and interactive app brings you random Chuck Norris jokes directly from the Chuck Norris Jokes API. With every click, you'll get a new, hilarious Chuck Norris joke that will surely make you chuckle! 😂
+
+<p align="center">
+<img src="https://github.com/ImanGholamii/Chuck_Norris_Jokes/blob/5709a3ee7b2a907d84dc4002726efc43ff361533/images/Chunck_Norris_App.JPG" alt="Chuck_Norris_Jokes" width="250" height="400">
+</p>
 
 ## 🌟 Features
 - 💬 **Fetch Random Jokes**: Simply click the Chuck Norris button to fetch a random joke from the API.
