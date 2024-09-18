@@ -2,18 +2,15 @@ from tkinter import Tk, Canvas, PhotoImage, Button
 
 import requests
 
-# ______________________________ get Chuck Norris endpoint data ______________________________
 
-response = requests.get(url="https://api.chucknorris.io/jokes/random")
-response.raise_for_status()
-data = response.json()
-
-
-# ______________________________ Send Jokes ______________________________
+# ______________________________ get Chuck Norris endpoint data & Send Jokes to btn ______________________________
 
 def send_joke():
+    response = requests.get(url="https://api.chucknorris.io/jokes/random")
+    response.raise_for_status()
+    data = response.json()
     random_joke = data['value']
-    return random_joke
+    canvas.itemconfig(joke, text=random_joke)
 
 
 # ______________________________ window confs ______________________________
@@ -40,7 +37,7 @@ bg_img = PhotoImage(file="./images/background.png")
 canvas.create_image(160, 240, image=bg_img)
 canvas.grid_configure(row=0, column=0)
 
-canvas.create_text(160, 208, text="Chuck Norris Jokes", width=250, font=("Arial", 20, "bold"), fill="white")
+joke = canvas.create_text(160, 208, text="Chuck Norris Jokes", width=250, font=("Arial", 20, "bold"), fill="white")
 
 chuck_norris_image = PhotoImage(file="./images/chuck-norris.png")
 chuck_btn = Button(
